@@ -1,19 +1,19 @@
-# This is an example of using cross chain ERC721 minting using Layerzero
+# This is an example of using cross chain ERC721 minting using Layer Zero
 ![Layer Zero](/Layer_Zero_Logo_Black%20(1).svg)
 
 ## Layerzero testnet endpoint and chainid 
 https://layerzero.gitbook.io/docs/technical-reference/testnet/testnet-addresses
 
-for my example 
-Mumbai
------------------
+for my example
+- Mumbai
 chainId: 10109
 endpoint: 0xf69186dfBa60DdB133E91E9A4B5673624293d8F8
+-----------------
 
-Goerli
-------------------
+- Goerli
 chainId: 10121
 endpoint: 0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23
+------------------
 
 ## Required file
 1. Layer zero interfaces - here i am using some required file for me in **contract/interfaces** folder
@@ -40,13 +40,12 @@ npx hardhat run .\tests\transfer_goerli.js --network goerli
 6. Now check generated transaction no.
 In my example , generated txn no is 
 **0x7b0ab7b2fb55d4c290f7190bff5441d7fe3895d92dc527e562250cb08e3b44eb in https://goerli.etherscan.io/address/0xFB2368e7EDFc61BD91B3a4731a9a212EF4ddE2Ae**
-
 after few minutes , you can see another transaction of minting new item from 0x00 to your mumbai contract.
 In my example - **https://mumbai.polygonscan.com/token/0xFB2368e7EDFc61BD91B3a4731a9a212EF4ddE2Ae**
 
 
-## On every transaction y9ou need to pass some related ether to layerzero, so they can make your transaction from backend
-## required fee you can calculated like below code and pass with value option
+## On every transaction you need to pass some ether to layerzero, so they can pay fee for your transaction from backend
+## required fee you can calculate like below code and pass with value option
   
 > const fees = await OmniChainNFT.estimateFees(
 >    10109, // mumbai chain 
