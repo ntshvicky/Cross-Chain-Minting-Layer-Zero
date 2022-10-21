@@ -5,14 +5,14 @@
 https://layerzero.gitbook.io/docs/technical-reference/testnet/testnet-addresses
 
 for my example
-- Mumbai
-chainId: 10109
-endpoint: 0xf69186dfBa60DdB133E91E9A4B5673624293d8F8
+- Mumbai Layer Zero
+ChainId: 10109
+Endpoint: 0xf69186dfBa60DdB133E91E9A4B5673624293d8F8
 -----------------
 
-- Goerli
-chainId: 10121
-endpoint: 0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23
+- Goerli Layer Zero
+ChainId: 10121
+Endpoint: 0xbfD2135BFfbb0B5378b56643c2Df8a87552Bfa23
 ------------------
 
 ## Required file
@@ -21,6 +21,8 @@ You can find these interfaces here
 https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts/interfaces
 and other related files
 https://github.com/LayerZero-Labs/solidity-examples/tree/main/contracts
+
+2. Contract you can find on Contract folder with file named OmniChainNFT.sol
 
 ## test step by step
 1. deploy contract in goerli
